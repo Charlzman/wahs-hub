@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="New Zealand Warriors fixtures, results and season ladder information on WAHS Hub.">
+    <title>WAHS Hub | Fixtures</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<!-- Shared header and responsive navigation -->
+<header>
+    <nav class="navBar" aria-label="Main navigation">
+        <a class="logo" href="index.html">
+            <img src="images/warriorsLogoTransparent.png" alt="New Zealand Warriors logo">
+            <span>
+                <strong>WAHS HUB</strong>
+                <small>UP THE WAHS!</small>
+            </span>
+        </a>
+        <ul class="desktopNav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="squad.html">Squad</a></li>
+            <li><a class="active" aria-current="page" href="fixtures.html">Fixtures</a></li>
+            <li><a href="fanZone.html">Fan Zone</a></li>
+        </ul>
+        <button
+            class="menuButton"
+            id="menuButton"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+        >
+            ☰ Menu
+        </button>
+        <section class="mobileMenu" id="mobileMenu" aria-label="Mobile navigation">
+            <button class="closeButton" id="closeMenuButton" type="button" aria-label="Close menu">&times;</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="squad.html">Squad</a></li>
+                <li><a class="active" aria-current="page" href="fixtures.html">Fixtures</a></li>
+                <li><a href="fanZone.html">Fan Zone</a></li>
+            </ul>
+        </section>
+    </nav>
+</header>
+<main>
+    <!-- Page introduction -->
+    <section class="pageBanner">
+        <img src="images/wahsHero.png" alt="Warriors flags and supporters at a match">
+        <section class="pageBannerText">
+            <p class="eyebrow">FOLLOW THE SEASON</p>
+            <h1>FIXTURES & RESULTS</h1>
+            <p>Match information, results and a look at the Warriors' 2026 season.</p>
+        </section>
+    </section>
+
+    <section class="content">
+        <section class="sectionHeading">
+            <p class="eyebrow">MATCH CENTRE</p>
+            <h2>All in one place</h2>
+            <p>Select a section below to explore upcoming fixture information, recent results or the regular-season ladder.</p>
+        </section>
+
+        <!-- Switch between upcoming matches, past results and the ladder -->
+        <section class="tabButtons" role="group" aria-label="Fixture sections">
+            <button class="filterButton active" type="button" data-fixture-tab="upcomingPanel" aria-pressed="true">Upcoming matches</button>
+            <button class="filterButton" type="button" data-fixture-tab="resultsPanel" aria-pressed="false">Past results</button>
+            <button class="filterButton" type="button" data-fixture-tab="ladderPanel" aria-pressed="false">Ladder</button>
+        </section>
+
+        <!-- Upcoming fixture information -->
+        <section class="fixturePanel" id="upcomingPanel">
+            <section class="sectionHeading compactHeading">
+                <h2>Upcoming matches</h2>
+                <p>The 2026 season has finished. The next draw is not included in this student website yet, so no future date or opponent has been guessed.</p>
+            </section>
+            <article class="fixtureNotice">
+                <span class="tag">NEXT FIXTURE</span>
+                <h3>Next Warriors match to be confirmed</h3>
+                <p>Check the official fixture list for the next confirmed match, venue and kick-off time.</p>
+                <a class="button" href="https://www.warriors.kiwi/" target="_blank" rel="noopener noreferrer">Check official fixtures</a>
+            </article>
+        </section>
+
+        <!-- Recent 2026 match results -->
+        <section class="fixturePanel hidden" id="resultsPanel">
+            <section class="sectionHeading compactHeading">
+                <h2>Recent results</h2>
+                <p>A notable match from the Warriors' 2026 finals campaign.</p>
+            </section>
+            <article class="resultCard">
+                <span class="tag">FINALS WEEK 2 • 20 SEPTEMBER 2026</span>
+                <section class="scoreLine">
+                    <section class="teamScore"><img src="images/warriorsLogoTransparent.png" alt="Warriors logo"><strong>Warriors</strong><b>10</b></section>
+                    <span class="versus">FULL TIME</span>
+                    <section class="teamScore"><strong>Knights</strong><b>12</b></section>
+                </section>
+                <p class="matchVenue">Eden Park, Auckland</p>
+                <p>Newcastle won 12–10 in front of a record rugby league crowd at Eden Park. Leka Halasima scored both Warriors tries.</p>
+                <a class="textButton" href="https://www.nrl.com/news/2026/09/20/nrl-sunday-blockbuster-warriors-v-knights/" target="_blank" rel="noopener noreferrer">Read the official match report &gt;</a>
+            </article>
+            <article class="resultCard resultCardSpacing">
+                <span class="tag">ROUND 27 • 5 SEPTEMBER 2026</span>
+                <section class="scoreLine">
+                    <section class="teamScore"><img src="images/warriorsLogoTransparent.png" alt="Warriors logo"><strong>Warriors</strong><b>31</b></section>
+                    <span class="versus">FULL TIME</span>
+                    <section class="teamScore"><strong>Sea Eagles</strong><b>30</b></section>
+                </section>
+                <p class="matchVenue">Go Media Stadium, Auckland</p>
+                <p>The Warriors edged Manly 31–30 to finish the regular season with their 18th win.</p>
+                <a class="textButton" href="https://www.warriors.kiwi/news/2026/09/01/nrl-team-list-seasoned-campaigners-back-on-deck/" target="_blank" rel="noopener noreferrer">Read the official team report &gt;</a>
+            </article>
+        </section>
+
+        <!-- Selected teams from the regular-season ladder -->
+        <section class="fixturePanel hidden" id="ladderPanel">
+            <section class="sectionHeading compactHeading">
+                <h2>2026 regular-season snapshot</h2>
+                <p>The Warriors finished the regular season second on points difference, tied on competition points with the Panthers.</p>
+            </section>
+            <div class="tableWrap">
+                <table class="ladderTable">
+                    <caption>Selected teams from the 2026 regular-season ladder</caption>
+                    <thead><tr><th scope="col">Pos.</th><th scope="col">Team</th><th scope="col">Played</th><th scope="col">Points</th></tr></thead>
+                    <tbody>
+                        <tr><td>1</td><td>Penrith Panthers</td><td>24</td><td>42</td></tr>
+                        <tr class="highlightRow"><td>2</td><td>New Zealand Warriors</td><td>24</td><td>42</td></tr>
+                        <tr><td>3</td><td>Dolphins</td><td>24</td><td>40</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="smallNote">This is a selected snapshot rather than the full ladder. Visit NRL.com for the complete official table and statistics.</p>
+            <a class="button" href="https://www.nrl.com/ladder/" target="_blank" rel="noopener noreferrer">View full NRL ladder</a>
+        </section>
+
+        <section class="sourceBox">
+            <h2>Fixture sources</h2>
+            <p>Match details and ladder information are based on the official NRL and New Zealand Warriors websites. Future fixtures should be checked against the official draw.</p>
+            <a href="https://www.warriors.kiwi/" target="_blank" rel="noopener noreferrer">Warriors.kiwi</a> ·
+            <a href="https://www.nrl.com/ladder/" target="_blank" rel="noopener noreferrer">NRL ladder</a>
+        </section>
+    </section>
+</main>
+<!-- Shared footer -->
+<footer>
+    <section class="footerGrid">
+        <section>
+            <h2>WAHS HUB</h2>
+            <p>Your fan-made New Zealand Warriors companion.</p>
+            <p class="footerNote">An independent student project, not an official club website.</p>
+        </section>
+        <section>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="squad.html">Squad</a><a href="fixtures.html">Fixtures</a>
+            <a href="fanZone.html">Fan Zone</a>
+        </section>
+        <section>
+            <h3>Official Sources</h3>
+            <a href="https://www.warriors.kiwi/" target="_blank" rel="noopener noreferrer">Warriors.kiwi</a>
+            <a href="https://www.nrl.com/" target="_blank" rel="noopener noreferrer">NRL.com</a>
+        </section>
+    </section>
+    <p class="copyright">Created by Charlie Marett • ITWD5.130 • 2026</p>
+</footer>
+</body>
+</html>

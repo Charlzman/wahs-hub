@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest New Zealand Warriors news on WAHS Hub.">
+    <title>WAHS Hub | News</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+<!-- The same navigation is used across the whole site. -->
+<header>
+    <nav class="navBar" aria-label="Main navigation">
+        <a class="logo" href="index.html">
+            <img src="images/warriorsLogoTransparent.png" alt="New Zealand Warriors logo">
+            <span>
+                <strong>WAHS HUB</strong>
+                <small>UP THE WAHS!</small>
+            </span>
+        </a>
+        <ul class="desktopNav">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" aria-current="page" href="news.html">News</a></li>
+            <li><a href="squad.html">Squad</a></li>
+            <li><a href="fixtures.html">Fixtures</a></li>
+            <li><a href="fanZone.html">Fan Zone</a></li>
+        </ul>
+        <button
+            class="menuButton"
+            id="menuButton"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+        >
+            ☰ Menu
+        </button>
+        <section class="mobileMenu" id="mobileMenu" aria-label="Mobile navigation">
+            <button class="closeButton" id="closeMenuButton" type="button" aria-label="Close menu">&times;</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" aria-current="page" href="news.html">News</a></li>
+                <li><a href="squad.html">Squad</a></li>
+                <li><a href="fixtures.html">Fixtures</a></li>
+                <li><a href="fanZone.html">Fan Zone</a></li>
+            </ul>
+        </section>
+    </nav>
+</header>
+
+<main>
+    <!-- News page hero section -->
+    <!-- The page title is placed over the image so it is clear when changing pages. -->
+    <section class="pageBanner">
+        <img src="images/wahsHero.png" alt="Warriors flags and supporters at a match">
+        <section class="pageBannerText">
+            <p class="eyebrow">WAHS HUB NEWS</p>
+            <h1>LATEST NEWS</h1>
+            <p>Warriors updates, match stories and club news in one place.</p>
+        </section>
+    </section>
+
+    <section class="content">
+        <section class="sectionHeading">
+            <p class="eyebrow">BROWSE STORIES</p>
+            <h2>Warriors News</h2>
+            <p>Use the buttons below to show the type of story you want to read.</p>
+        </section>
+
+        <!-- JavaScript changes which news cards are visible -->
+        <section class="filters" aria-label="News filters">
+            <button class="filterButton active" data-filter="all" type="button">All</button>
+            <button class="filterButton" data-filter="match" type="button">Match</button>
+            <button class="filterButton" data-filter="team" type="button">Team</button>
+            <button class="filterButton" data-filter="fans" type="button">Fans</button>
+        </section>
+
+        <!-- News articles are shown as simple cards. -->
+        <section class="cardGrid newsGrid">
+            <article class="card newsItem" id="news1" data-category="match">
+                <img src="images/news/nrl-web-banner-copy-week-2-finals.jpg" alt="Leka Halasima carrying the ball against Newcastle">
+                <section class="cardText">
+                    <span class="tag">MATCH</span>
+                    <h3>Knights stun Warriors in Eden Park semi-final</h3>
+                    <p>Newcastle held on for a 12-10 win over the Warriors at Eden Park on 20 September.</p>
+                    <p class="extraText hidden">The match was level at 6-6 at half-time before Newcastle moved ahead in the second half. Halasima scored again late in the game as the Warriors pushed for a comeback.</p>
+                    <button class="textButton readMore" type="button">Read more &gt;</button>
+                    <a class="sourceLink" href="https://www.nrl.com/news/2026/09/20/nrl-sunday-blockbuster-warriors-v-knights/" target="_blank" rel="noopener noreferrer">Source: NRL.com</a>
+                </section>
+            </article>
+
+            <article class="card newsItem" id="news2" data-category="team">
+                <img src="images/news/2026-eden-park-1e.jpg" alt="Warriors players at Eden Park">
+                <section class="cardText">
+                    <span class="tag">TEAM</span>
+                    <h3>DWZ and Halasima return for the big clash</h3>
+                    <p>Dallin Watene-Zelezniak and Leka Halasima were confirmed in the starting side.</p>
+                    <p class="extraText hidden">Watene-Zelezniak was returning from a broken collarbone and was set to make his 250th NRL appearance, while Halasima came into the centres.</p>
+                    <button class="textButton readMore" type="button">Read more &gt;</button>
+                    <a class="sourceLink" href="https://www.warriors.kiwi/news/2026/09/20/nrl-confirmed-lineup-dwz-and-halasima-to-start/" target="_blank" rel="noopener noreferrer">Source: Warriors.kiwi</a>
+                </section>
+            </article>
+
+            <article class="card newsItem" id="news3" data-category="fans">
+                <img src="images/news/sky-tower-2022-1a.jpg" alt="Sky Tower lit in Warriors colours">
+                <section class="cardText">
+                    <span class="tag">FANS</span>
+                    <h3>Auckland lights up for Wahs Weekend</h3>
+                    <p>Major Auckland landmarks were lit in Warriors colours ahead of the sold-out Eden Park final.</p>
+                    <p class="extraText hidden">The Warriors said the expected crowd was more than 48,000, with fans also able to use public transport to get to Eden Park with their match tickets.</p>
+                    <button class="textButton readMore" type="button">Read more &gt;</button>
+                    <a class="sourceLink" href="https://www.warriors.kiwi/news/2026/09/18/auckland-up-in-lights-to-celebrate-wahs-weekend/" target="_blank" rel="noopener noreferrer">Source: Warriors.kiwi</a>
+                </section>
+            </article>
+
+            <article class="card newsItem" data-category="team">
+                <img src="images/news/james-fisher-harris-3g.jpg" alt="James Fisher-Harris receiving the Simon Mannering Medal">
+                <section class="cardText">
+                    <span class="tag">TEAM</span>
+                    <h3>James Fisher-Harris wins Simon Mannering Medal</h3>
+                    <p>The co-captain was named the Warriors' premier player of the 2026 season.</p>
+                    <p class="extraText hidden">Fisher-Harris received the award at the club's 2026 awards night in Auckland.</p>
+                    <button class="textButton readMore" type="button">Read more &gt;</button>
+                    <a class="sourceLink" href="https://www.warriors.kiwi/news/2026/09/16/fisher-harris-lauded-as-simon-mannering-medallist/" target="_blank" rel="noopener noreferrer">Source: Warriors.kiwi</a>
+                </section>
+            </article>
+
+            <article class="card newsItem" data-category="team">
+                <img src="images/news/charnze_banner-rd-27.jpg" alt="Charnze Nicoll-Klokstad in Warriors colours">
+                <section class="cardText">
+                    <span class="tag">TEAM</span>
+                    <h3>Senior players return for the final regular-season round</h3>
+                    <p>Te Maire Martin, Chanel Harris-Tavita and Charnze Nicoll-Klokstad returned for the Sea Eagles clash.</p>
+                    <p class="extraText hidden">The Warriors went into that round on top of the table and were preparing for their finals campaign.</p>
+                    <button class="textButton readMore" type="button">Read more &gt;</button>
+                    <a class="sourceLink" href="https://www.warriors.kiwi/news/2026/09/01/nrl-team-list-seasoned-campaigners-back-on-deck/" target="_blank" rel="noopener noreferrer">Source: Warriors.kiwi</a>
+                </section>
+            </article>
+
+            <article class="card newsItem" data-category="team">
+                <img src="images/news/eddie-ieremia-toeava-1p.jpg" alt="Eddie Ieremia-Toeava carrying the ball for the Warriors">
+                <section class="cardText">
+                    <span class="tag">TEAM</span>
+                    <h3>Eddie Ieremia-Toeava named NRL Rookie of the Year</h3>
+                    <p>The young forward was recognised at the Warriors' 2026 awards night.</p>
+                    <p class="extraText hidden">The awards also recognised Jacob Laban as the NRL Players' Player of the Year and Erin Clark as the NRL People's Choice winner.</p>
+                    <button class="textButton readMore" type="button">Read more &gt;</button>
+                    <a class="sourceLink" href="https://www.warriors.kiwi/news/2026/09/16/fisher-harris-lauded-as-simon-mannering-medallist/" target="_blank" rel="noopener noreferrer">Source: Warriors.kiwi</a>
+                </section>
+            </article>
+        </section>
+    </section>
+
+    <section class="sourceBox">
+        <h2>Image and information sources</h2>
+        <p>Images and some information on this prototype are sourced from the official One New Zealand Warriors website and NRL.com.</p>
+        <p>External content is credited here and through the source links on each article.</p>
+    </section>
+</main>
+
+<footer>
+    <section class="footerGrid">
+        <section>
+            <h2>WAHS HUB</h2>
+            <p>Your fan-made New Zealand Warriors companion.</p>
+            <p class="footerNote">An independent student project, not an official club website.</p>
+        </section>
+        <section>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="squad.html">Squad</a><a href="fixtures.html">Fixtures</a>
+            <a href="fanZone.html">Fan Zone</a>
+        </section>
+        <section>
+            <h3>Official Sources</h3>
+            <a href="https://www.warriors.kiwi/" target="_blank" rel="noopener noreferrer">Warriors.kiwi</a>
+            <a href="https://www.nrl.com/" target="_blank" rel="noopener noreferrer">NRL.com</a>
+        </section>
+    </section>
+    <p class="copyright">Created by Charlie Marett • ITWD5.130 • 2026</p>
+</footer>
+
+</body>
+</html>

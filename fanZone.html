@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Have your say with supporter polls and match predictions on WAHS Hub.">
+    <title>WAHS Hub | Fan Zone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<!-- Shared header and responsive navigation -->
+<header>
+    <nav class="navBar" aria-label="Main navigation">
+        <a class="logo" href="index.html">
+            <img src="images/warriorsLogoTransparent.png" alt="New Zealand Warriors logo">
+            <span>
+                <strong>WAHS HUB</strong>
+                <small>UP THE WAHS!</small>
+            </span>
+        </a>
+        <ul class="desktopNav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="squad.html">Squad</a></li>
+            <li><a href="fixtures.html">Fixtures</a></li>
+            <li><a class="active" aria-current="page" href="fanZone.html">Fan Zone</a></li>
+        </ul>
+        <button
+            class="menuButton"
+            id="menuButton"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+        >
+            ☰ Menu
+        </button>
+        <section class="mobileMenu" id="mobileMenu" aria-label="Mobile navigation">
+            <button class="closeButton" id="closeMenuButton" type="button" aria-label="Close menu">&times;</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="squad.html">Squad</a></li>
+                <li><a href="fixtures.html">Fixtures</a></li>
+                <li><a class="active" aria-current="page" href="fanZone.html">Fan Zone</a></li>
+            </ul>
+        </section>
+    </nav>
+</header>
+<main>
+    <!-- Page introduction -->
+    <section class="pageBanner">
+        <img src="images/wahsHero.png" alt="Warriors flags and supporters at a match">
+        <section class="pageBannerText">
+            <p class="eyebrow">HAVE YOUR SAY</p>
+            <h1>FAN ZONE</h1>
+            <p>Polls, predictions and more Wahs spirit in one place.</p>
+        </section>
+    </section>
+
+    <section class="content">
+        <section class="sectionHeading">
+            <p class="eyebrow">YOUR VOICE MATTERS</p>
+            <h2>Join the conversation</h2>
+            <p>Cast your vote to see the poll results, then make your prediction for the next Warriors match.</p>
+        </section>
+
+        <!-- The poll and prediction each show results after submission -->
+        <section class="fanGrid">
+            <!-- Player of the Year poll -->
+            <article class="fanCard">
+                <p class="eyebrow">FAN POLL</p>
+                <h2>Who was your Warriors player of the 2026 season?</h2>
+                <form id="fanPollForm">
+                    <fieldset class="choiceList">
+                        <legend>Choose one player</legend>
+                        <label><input type="radio" name="fanPoll" value="Taine Tuaupiki" required> Taine Tuaupiki</label>
+                        <label><input type="radio" name="fanPoll" value="James Fisher-Harris"> James Fisher-Harris</label>
+                        <label><input type="radio" name="fanPoll" value="Leka Halasima"> Leka Halasima</label>
+                        <label><input type="radio" name="fanPoll" value="Chanel Harris-Tavita"> Chanel Harris-Tavita</label>
+                        <label><input type="radio" name="fanPoll" value="Other player"> Other player</label>
+                    </fieldset>
+                    <button class="button" type="submit">Vote now</button>
+                </form>
+                <p id="pollMessage" class="statusMessage" role="status" aria-live="polite"></p>
+                <section class="pollResults hidden" aria-label="Poll results" id="pollResults" aria-live="polite">
+                    <h3>Poll results</h3>
+                    <p class="smallNote">These figures are sample percentages and do not represent live supporter votes.</p>
+                    <section class="resultBar"><span>Taine Tuaupiki</span><strong>40%</strong><div><span style="width:40%"></span></div></section>
+                    <section class="resultBar"><span>James Fisher-Harris</span><strong>25%</strong><div><span style="width:25%"></span></div></section>
+                    <section class="resultBar"><span>Leka Halasima</span><strong>16%</strong><div><span style="width:16%"></span></div></section>
+                    <section class="resultBar"><span>Chanel Harris-Tavita</span><strong>11%</strong><div><span style="width:11%"></span></div></section>
+                    <section class="resultBar"><span>Other player</span><strong>8%</strong><div><span style="width:8%"></span></div></section>
+                </section>
+            </article>
+
+            <!-- Match prediction form -->
+            <article class="fanCard predictionCard">
+                <p class="eyebrow">MATCH PREDICTION</p>
+                <h2>Predict the result of the next Warriors match</h2>
+                <p class="smallNote">The next fixture is awaiting confirmation, so choose the outcome rather than a specific opponent.</p>
+                <form id="predictionForm">
+                    <fieldset class="choiceList">
+                        <legend>What is your prediction?</legend>
+                        <label><input type="radio" name="prediction" value="A Warriors win" required> A Warriors win</label>
+                        <label><input type="radio" name="prediction" value="An opposition win"> An opposition win</label>
+                        <label><input type="radio" name="prediction" value="A draw"> A draw</label>
+                    </fieldset>
+                    <label class="searchLabel" for="predictedScore">Predicted Warriors score (optional)</label>
+                    <input class="searchInput scoreInput" id="predictedScore" type="number" min="0" max="100" placeholder="e.g. 24">
+                    <button class="button" type="submit">Submit prediction</button>
+                </form>
+                <p id="predictionMessage" class="statusMessage" role="status" aria-live="polite"></p>
+                <section class="pollResults hidden" aria-label="Match prediction results" id="predictionResults" aria-live="polite">
+                    <h3>Prediction results</h3>
+                    <p class="smallNote">Sample prediction percentages for the website. These are not live votes from other visitors.</p>
+                    <section class="resultBar"><span>Warriors win</span><strong>68%</strong><div><span style="width:68%"></span></div></section>
+                    <section class="resultBar"><span>Opposition win</span><strong>25%</strong><div><span style="width:25%"></span></div></section>
+                    <section class="resultBar"><span>Draw</span><strong>7%</strong><div><span style="width:7%"></span></div></section>
+                </section>
+            </article>
+        </section>
+
+        <section class="sourceBox">
+            <h2>Keep it respectful</h2>
+            <p>Support the team and respect other fans. Votes and predictions are kept for the current visit only and are not saved after the page is closed.</p>
+        </section>
+    </section>
+</main>
+<!-- Shared footer -->
+<footer>
+    <section class="footerGrid">
+        <section>
+            <h2>WAHS HUB</h2>
+            <p>Your fan-made New Zealand Warriors companion.</p>
+            <p class="footerNote">An independent student project, not an official club website.</p>
+        </section>
+        <section>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="squad.html">Squad</a><a href="fixtures.html">Fixtures</a>
+            <a href="fanZone.html">Fan Zone</a>
+        </section>
+        <section>
+            <h3>Official Sources</h3>
+            <a href="https://www.warriors.kiwi/" target="_blank" rel="noopener noreferrer">Warriors.kiwi</a>
+            <a href="https://www.nrl.com/" target="_blank" rel="noopener noreferrer">NRL.com</a>
+        </section>
+    </section>
+    <p class="copyright">Created by Charlie Marett • ITWD5.130 • 2026</p>
+</footer>
+</body>
+</html>

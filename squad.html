@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the New Zealand Warriors players who made first-grade appearances during the 2026 NRL season.">
+    <title>WAHS Hub | Squad</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<!-- Shared header and responsive navigation -->
+<header>
+    <nav class="navBar" aria-label="Main navigation">
+        <a class="logo" href="index.html">
+            <img src="images/warriorsLogoTransparent.png" alt="New Zealand Warriors logo">
+            <span>
+                <strong>WAHS HUB</strong>
+                <small>UP THE WAHS!</small>
+            </span>
+        </a>
+        <ul class="desktopNav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a class="active" aria-current="page" href="squad.html">Squad</a></li>
+            <li><a href="fixtures.html">Fixtures</a></li>
+            <li><a href="fanZone.html">Fan Zone</a></li>
+        </ul>
+        <button
+            class="menuButton"
+            id="menuButton"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+        >
+            ☰ Menu
+        </button>
+        <section class="mobileMenu" id="mobileMenu" aria-label="Mobile navigation">
+            <button class="closeButton" id="closeMenuButton" type="button" aria-label="Close menu">&times;</button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a class="active" aria-current="page" href="squad.html">Squad</a></li>
+                <li><a href="fixtures.html">Fixtures</a></li>
+                <li><a href="fanZone.html">Fan Zone</a></li>
+            </ul>
+        </section>
+    </nav>
+</header>
+<main>
+    <!-- Page introduction -->
+    <section class="pageBanner">
+        <img src="images/wahsHero.png" alt="Warriors flags and supporters at a match">
+        <section class="pageBannerText">
+            <p class="eyebrow">MEET THE WARRIORS</p>
+            <h1>THE SQUAD</h1>
+            <p>Meet every Warriors player who made a first-grade appearance during the 2026 NRL season.</p>
+        </section>
+    </section>
+
+    <section class="content">
+        <section class="sectionHeading">
+            <p class="eyebrow">PLAYER PROFILES</p>
+            <h2>Warriors players</h2>
+            <p>Browse all 30 Warriors players who recorded first-grade appearances in the 2026 NRL season. Search by name or filter by playing position.</p>
+        </section>
+
+        <!-- Search and position filters -->
+        <section class="squadTools" aria-label="Squad search and filters">
+            <label class="searchLabel" for="playerSearch">Search players</label>
+            <input id="playerSearch" class="searchInput" type="search" placeholder="e.g. Fisher-Harris" autocomplete="off">
+            <section class="filters" aria-label="Filter players">
+                <button class="filterButton active" type="button" data-player-filter="all" aria-pressed="true">All</button>
+                <button class="filterButton" type="button" data-player-filter="forward" aria-pressed="false">Forwards</button>
+                <button class="filterButton" type="button" data-player-filter="back" aria-pressed="false">Backs</button>
+            </section>
+        </section>
+
+        <!-- Player cards use the same layout to keep the squad consistent. -->
+        <section class="cardGrid squadGrid" id="playerGrid" aria-live="polite">
+            <article class="card playerCard" data-category="forward" data-name="mitchell barnett prop forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FMitch+Barnett_003.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Mitchell Barnett wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Mitchell Barnett</h3>
+                    <p class="playerMeta">Prop • 17 appearances in 2026</p>
+                    <p>A hard-working prop who brings strength and leadership through the middle.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Barnett made 17 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/mitchell-barnett/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="tanah boyd halfback back">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FTanah+Boyd-W-003.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Tanah Boyd wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Tanah Boyd</h3>
+                    <p class="playerMeta">Halfback • 10 appearances in 2026</p>
+                    <p>A halfback who helps organise the attack and control the kicking game.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Boyd made 10 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/tanah-boyd/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="kurt capewell second row forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FKurt+Capewell_004.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Kurt Capewell wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Kurt Capewell</h3>
+                    <p class="playerMeta">Second row • 15 appearances in 2026</p>
+                    <p>An experienced second-rower who adds defence and leadership.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Capewell made 15 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/kurt-capewell/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="erin clark lock forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FErin+Clark-004.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Erin Clark wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Erin Clark</h3>
+                    <p class="playerMeta">Lock • 26 appearances in 2026</p>
+                    <p>A versatile middle forward who works hard in defence and around the ruck.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Clark appeared in all 26 Warriors matches recorded for the 2026 season.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/erin-clark/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="jett cleary halfback back">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FJett+Cleary_006.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Jett Cleary wearing Warriors colours"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Jett Cleary</h3>
+                    <p class="playerMeta">Halfback • 1 appearance in 2026</p>
+                    <p>A young playmaker who made his first-grade appearance for the Warriors in 2026.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Cleary made one first-grade appearance for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nsw-cup/warriors/jett-cleary/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="wayde egan hooker forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FWayde+Egan_007.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Wayde Egan wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Wayde Egan</h3>
+                    <p class="playerMeta">Hooker • 25 appearances in 2026</p>
+                    <p>The regular hooker who directs play from dummy-half.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Egan made 25 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/wayde-egan/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="james fisher harris prop forward fish jfh">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FJames+Fisher-Harris-003.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="James Fisher-Harris wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>James Fisher-Harris</h3>
+                    <p class="playerMeta">Prop • 23 appearances in 2026</p>
+                    <p>A powerful middle forward and one of the Warriors’ leaders.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Fisher-Harris made 23 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/james-fisher-harris/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="jackson ford second row forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FJackson+Ford_004.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Jackson Ford wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Jackson Ford</h3>
+                    <p class="playerMeta">Second row • 15 appearances in 2026</p>
+                    <p>A hardworking forward who adds effort in the middle and back row.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Ford made 15 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/jackson-ford/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="morgan gannon second row forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FMorgan+Gannon_006.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Morgan Gannon wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Morgan Gannon</h3>
+                    <p class="playerMeta">Second row • 3 appearances in 2026</p>
+                    <p>A young second-rower who made three first-grade appearances in 2026.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Gannon made three first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/morgan-gannon/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="leka halasima second row forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FLeka+Halasima-003.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Leka Halasima wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Leka Halasima</h3>
+                    <p class="playerMeta">Second row • 21 appearances in 2026</p>
+                    <p>An exciting young forward who can also cover the outside backs when needed.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Halasima made 21 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/leka-halasima/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="luke hanson five-eighth back">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FLuke+Hanson-004.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Luke Hanson wearing Warriors colours"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Luke Hanson</h3>
+                    <p class="playerMeta">Five-eighth • 3 appearances in 2026</p>
+                    <p>A young playmaker who had opportunities in the first-grade side during 2026.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Hanson made three first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nsw-cup/warriors/luke-hanson/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="chanel harris tavita halfback / five-eighth back cht">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FChanel+Harris-Tavita_003.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Chanel Harris-Tavita wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Chanel Harris-Tavita</h3>
+                    <p class="playerMeta">Halfback / Five-eighth • 22 appearances in 2026</p>
+                    <p>A flexible playmaker who can cover both halves positions.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Harris-Tavita made 22 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/chanel-harris-tavita/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="samuel healey hooker forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FSam+Healey_003.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Samuel Healey wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Samuel Healey</h3>
+                    <p class="playerMeta">Hooker • 22 appearances in 2026</p>
+                    <p>An energetic hooker who provides service from dummy-half.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Healey made 22 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/samuel-healey/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="eddie ieremia toeava second row forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FEddie+Ieremia-Toeava_003.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Eddie Ieremia-Toeava wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Eddie Ieremia-Toeava</h3>
+                    <p class="playerMeta">Second row • 13 appearances in 2026</p>
+                    <p>A young forward who adds size and effort around the middle.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Ieremia-Toeava made 13 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/eddie-ieremia-toeava/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="alofiana khan pereira winger back lofi">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FAlofiana+Khan-Pereira-003.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Alofiana Khan-Pereira wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Alofiana Khan-Pereira</h3>
+                    <p class="playerMeta">Winger • 19 appearances in 2026</p>
+                    <p>A fast outside back known for his try-scoring and finishing.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Khan-Pereira scored 16 tries across 19 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/alofiana-khan-pereira/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="jacob laban second row forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FJacob+Laban-004.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Jacob Laban wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Jacob Laban</h3>
+                    <p class="playerMeta">Second row • 25 appearances in 2026</p>
+                    <p>A mobile second-rower who contributes in attack and defence.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Laban made 25 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/jacob-laban/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="luke laulilii winger back">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FLuke+Laulilii_BODYSHOT.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Luke Laulilii wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Luke Laulilii</h3>
+                    <p class="playerMeta">Winger • 1 appearances in 2026</p>
+                    <p>A young winger who featured in the Warriors’ first-grade team in 2026.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Laulilii made one first-grade appearance for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/luke-laulilii/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="ali leiataua centre back">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FAli+Leiataua-003.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Ali Leiataua wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Ali Leiataua</h3>
+                    <p class="playerMeta">Centre • 22 appearances in 2026</p>
+                    <p>A strong centre who offers carries and line-break threat.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Leiataua made 22 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/ali-leiataua/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="te maire martin five-eighth / halfback back">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FTe+Maire+Martin-004.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Te Maire Martin wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Te Maire Martin</h3>
+                    <p class="playerMeta">Five-eighth / Halfback • 13 appearances in 2026</p>
+                    <p>An experienced playmaker who can cover both halves positions.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Martin made 13 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/te-maire-martin/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="luke metcalf five-eighth back">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FLuke+Metcalf_006.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Luke Metcalf wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Luke Metcalf</h3>
+                    <p class="playerMeta">Five-eighth • 4 appearances in 2026</p>
+                    <p>An attacking playmaker who can create opportunities with his running game.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Metcalf made four first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/luke-metcalf/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="charnze nicoll klokstad fullback back cnk">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FCharnze+Nicoll-Klokstad_003.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Charnze Nicoll-Klokstad wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Charnze Nicoll-Klokstad</h3>
+                    <p class="playerMeta">Fullback • 16 appearances in 2026</p>
+                    <p>An experienced fullback who can also cover other positions in the backline.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Nicoll-Klokstad made 16 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/charnze-nicoll-klokstad/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="marata niukore second row forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FMarata+Niukore_003.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Marata Niukore wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Marata Niukore</h3>
+                    <p class="playerMeta">Second row • 9 appearances in 2026</p>
+                    <p>A versatile forward who can play in the middle or on the edge.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Niukore made nine first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/marata-niukore/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="adam pompey centre back">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FAdam+Pompey-004.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Adam Pompey wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Adam Pompey</h3>
+                    <p class="playerMeta">Centre • 17 appearances in 2026</p>
+                    <p>A centre who provides strong carries and goal-kicking when required.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Pompey made 17 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/adam-pompey/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="riley price lock forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.warriors.kiwi/SysSiteAssets/teams/riley-price_bodyshot.png?center=0.18%2C0.5&amp;preset=player-profile-large"
+                    alt="Riley Price wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Riley Price</h3>
+                    <p class="playerMeta">Lock • 1 appearances in 2026</p>
+                    <p>A forward who made a first-grade appearance for the Warriors in 2026.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Price made one first-grade appearance for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/riley-price/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="tanner stowers smith prop forward tss">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FTanner+Stowers+Smith-004.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Tanner Stowers-Smith wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Tanner Stowers-Smith</h3>
+                    <p class="playerMeta">Prop • 21 appearances in 2026</p>
+                    <p>A young prop who works hard with carries and tackles in the middle.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Stowers-Smith made 21 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/tanner-stowers-smith/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="makaia tafua hooker forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FMakaia+Tafua_003.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Makaia Tafua wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Makaia Tafua</h3>
+                    <p class="playerMeta">Hooker • 3 appearances in 2026</p>
+                    <p>A young hooker who made his first-grade debut for the Warriors in 2026.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Tafua made three first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/makaia-tafua/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="taine tuaupiki fullback back">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FTaine+Tuaupiki-004.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Taine Tuaupiki wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Taine Tuaupiki</h3>
+                    <p class="playerMeta">Fullback • 22 appearances in 2026</p>
+                    <p>A quick fullback who offers support in attack and from kick returns.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Tuaupiki made 22 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/taine-tuaupiki/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="roger tuivasa sheck centre back rts">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FRoger+Tuivasa-Sheck_005.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Roger Tuivasa-Sheck wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Roger Tuivasa-Sheck</h3>
+                    <p class="playerMeta">Centre • 10 appearances in 2026</p>
+                    <p>An experienced outside back who brings footwork and strong carries.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Tuivasa-Sheck made 10 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/roger-tuivasa-sheck/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="forward" data-name="demitric vaimauga prop forward">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FDemitric+Vaimauga-004.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Demitric Vaimauga wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">FORWARD</span>
+                    <h3>Demitric Vaimauga</h3>
+                    <p class="playerMeta">Prop • 22 appearances in 2026</p>
+                    <p>A strong prop who contributes carries, tackles and work through the middle.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Vaimauga made 22 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/demitric-sifakula/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+
+            <article class="card playerCard" data-category="back" data-name="dallin watene zelezniak winger back dwz">
+                <img
+                    class="playerPortrait"
+                    src="https://www.nrl.com/remote.axd?http%3A%2F%2Frugbyimages.statsperform.com%2FPlayer+Bodyshots%2F111%2F2026%2F500032%2FDallin+Watene-Zelezniak-003.png%3Fcenter=0.5%2C0.5&amp;preset=player-profile-large"
+                    alt="Dallin Watene-Zelezniak wearing the Warriors playing jersey"
+                    loading="lazy"
+                >
+                <section class="cardText">
+                    <span class="tag">BACK</span>
+                    <h3>Dallin Watene-Zelezniak</h3>
+                    <p class="playerMeta">Winger • 22 appearances in 2026</p>
+                    <p>An experienced winger known for his finishing and kick returns.</p>
+                    <button class="textButton profileButton" type="button" aria-expanded="false">View profile &gt;</button>
+                    <p class="profileDetails hidden">
+                        Watene-Zelezniak scored 20 tries across 22 first-grade appearances for the Warriors in 2026.
+                        <a href="https://www.nrl.com/players/nrl-premiership/warriors/dallin-watene-zelezniak/" target="_blank" rel="noopener noreferrer">View NRL profile</a>.
+                    </p>
+                </section>
+            </article>
+        </section>
+        <p id="noPlayersMessage" class="statusMessage hidden" role="status">No players match that search. Try another name or filter.</p>
+
+        <!-- Notes about the appearance list and its sources -->
+        <section class="squadNote">
+            <h2>2026 first-grade squad</h2>
+            <p>This list includes every Warriors player recorded with at least one first-grade appearance during the 2026 NRL season, including finals matches. Appearance totals are based on the season summary linked below.</p>
+        </section>
+        <section class="sourceBox">
+            <h2>Player information and image sources</h2>
+            <p>Player portraits and positions are sourced from official NRL player profiles. The appearance totals are based on the 2026 Warriors season summary. This is a fan-made student project, not an official club website.</p>
+            <a href="https://www.warriors.kiwi/" target="_blank" rel="noopener noreferrer">Warriors.kiwi</a> ·
+            <a href="https://www.nrl.com/clubs/warriors/" target="_blank" rel="noopener noreferrer">NRL Warriors club profile</a> ·
+            <a href="https://www.rugbyleagueproject.org/seasons/nrl-2026/warriors/summary.html" target="_blank" rel="noopener noreferrer">2026 season appearances</a>
+        </section>
+    </section>
+</main>
+<!-- Shared footer -->
+<footer>
+    <section class="footerGrid">
+        <section>
+            <h2>WAHS HUB</h2>
+            <p>Your fan-made New Zealand Warriors companion.</p>
+            <p class="footerNote">An independent student project, not an official club website.</p>
+        </section>
+        <section>
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="squad.html">Squad</a><a href="fixtures.html">Fixtures</a>
+            <a href="fanZone.html">Fan Zone</a>
+        </section>
+        <section>
+            <h3>Official Sources</h3>
+            <a href="https://www.warriors.kiwi/" target="_blank" rel="noopener noreferrer">Warriors.kiwi</a>
+            <a href="https://www.nrl.com/" target="_blank" rel="noopener noreferrer">NRL.com</a>
+        </section>
+    </section>
+    <p class="copyright">Created by Charlie Marett • ITWD5.130 • 2026</p>
+</footer>
+</body>
+</html>
